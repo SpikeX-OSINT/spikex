@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: grid;
+    place-items: center;
+    font-family: 'Rubik', sans-serif;
+    
+}
+.not_found{
+    color: greenyellow;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.not_found h1{
+    font-size: 96px;
+}
+.not_found p{
+    color: white;
+    font-size: 26px;
+   
+}
+.not_found a{
+    text-decoration: none;
+    color: greenyellow;
+}

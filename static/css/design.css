@@ -1,0 +1,292 @@
+* {
+	box-sizing: border-box;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-size: cover;
+	background-position: center;
+	background-color: #171515;
+	background-repeat: no-repeat;
+}
+
+.options {
+	text-align: right;
+	background-image: linear-gradient(360deg, black, #363738);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: 'poppins', sans-serif;
+}
+
+/*.active, .options ul li:hover{
+    
+    background-color: #4e6c4e;
+    border-radius: 10px;
+    text-align: center;*/
+
+
+ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 30px 0px 10px;
+	flex: 1;
+	text-align: right;
+	padding-right: 40px;
+
+
+}
+
+.options ul li {
+	display: inline-block;
+	list-style: none;
+	margin: 10px 30px;
+
+
+}
+
+.options ul li a {
+	text-decoration: none;
+	color: #ccff00;
+	font-size: 25px;
+}
+
+/*.options nav ul li a::after {
+	content: "";
+	position: absolute;
+	background-color: palevioletred;
+	display: block;
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -10px;
+
+}*/
+
+.options nav ul li a:hover,
+.options nav ul li a.active {
+	color: white;
+}
+
+.options nav ul li a:hover::after {
+	width: 100%;
+	transition: width 0.3s;
+
+}
+
+/*.options .fa{
+    margin-right: 10px;} */
+
+.logo {
+	color: white;
+	font-size: 50px;
+	padding: 20px;
+	font-family: 'Kanit', sans-serif;
+	margin-left: 40px;
+
+}
+
+.logo span {
+	color: #2cd90d;
+	
+}
+
+
+#video {
+	position: relative;
+	top: 600px;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.8);
+	background-blend-mode: blend;
+
+}
+
+#bgvid {
+	position: relative;
+
+	left: 0;
+	width: 40%;
+	height: 50%;
+	object-fit: cover;
+	z-index: -1;
+}
+
+.content {
+	color: white;
+	position: relative;
+	text-align: center;
+	top: -200px;
+}
+
+.heading {
+	position: relative;
+	top: 230px;
+	color: #39ff14;
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 50px;
+	text-align: center;
+
+
+}
+
+.loader {
+	/* width: 100%;
+    height: 100vh;
+    background: #171515;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+form {
+	position: relative;
+	background: #fff;
+	/*  left: 730px;*/
+	top: 300px;
+	width: 700px;
+	height: 50px;
+	display: flex;
+	/* background: linear-gradient(90deg, #fbffff, rgb(160, 223, 77));
+    animation: loader 20s linear infinite;
+    background-size: 600%; */
+	/* background: #fff;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);*/
+}
+
+/*form input::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, white, rgb(249, 251, 248));
+    animation: loader 20s linear infinite;
+    background-size: 600%;
+    filter: blur(10px); 
+}*/
+form input {
+	flex: 1;
+	border: none;
+	outline: none;
+	padding-left: 20px;
+	font-size: 20px;
+	box-shadow: 0 0 5px white,
+		0 0 30px white;
+}
+
+form button {
+	background: black;
+	color: rgb(97, 218, 36);
+	padding: 10px 50px;
+	outline: none;
+	border: none;
+	font-size: 33px;
+	line-height: 20px;
+	font-weight: 1000;
+	font-family: 'Noto Sans Miao', sans-serif;
+	cursor: pointer;
+	/* box-shadow: 0 0 5px greenyellow,
+    0 0 10px greenyellow;*/
+
+
+}
+
+form button:hover {
+	box-shadow: 0 0 5px rgb(22, 83, 18),
+		0 0 20px rgb(17, 88, 21), 0 0 80px rgb(9, 74, 13);
+}
+
+/* .loader::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, white, rgb(174, 238, 128));
+    animation: loader 20s linear infinite;
+    background-size: 600%;
+    filter: blur(20px); 
+}*/
+
+
+@keyframes loader {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 600% 0;
+	}
+}
+
+.slider {
+	position: relative;
+	top: -200px;
+}
+
+.logo-image1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+
+	padding-top: 50px;
+	padding-bottom: 10px;
+
+}
+
+.imgweb {
+	width: 150px;
+}
+
+.imgshodan {
+	width: 180px;
+}
+
+.imgpython {
+	width: 60px;
+}
+
+.imgdigitalocean {
+	width: 190px;
+}
+
+.logo-image2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+
+
+	padding-top: 20px;
+	padding-bottom: 70px;
+
+}
+
+.imgnginx {
+	width: 70px;
+}
+
+.imggunicorn {
+	width: 220px;
+}
+
+.imgjson {
+	width: 60px;
+}
+
+.imgflask {
+	width: 130px;
+}
+
+.technologies {
+	font-family: 'Titillium Web', sans-serif;
+	color: #fff;
+	font-size: 44px;
+
+	text-align: center;
+	padding-top: 50px;
+}

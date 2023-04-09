@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>SpikeX</title>
+
+      <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='media/favicon.ico') }}">
+
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+      <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Miao&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Miao&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap" rel="stylesheet">
+   </head>
+   <style>
+      @import url(
+      'https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+      .backvideo{
+      font-family: Montserrat;
+      text-align: center;
+      color: white;
+      font-size: 50px;
+      /* padding-top: 40vh;*/
+      overflow: hidden;
+      }
+      .slider{
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      }
+      .slider:first-of-type{
+      animation: appear 6s infinite;
+      }
+      .slider:last-of-type{
+      animation: reveal 6s infinite;
+      }
+      .slider:last-of-type span{
+      font-size: 33px;
+      color: #808000;
+      animation: slide 6s infinite;
+      }
+      @keyframes appear{
+      0%{opacity: 0;}
+      20%{opacity: 1;}
+      80%{opacity: 1;}
+      100%{opacity: 0;}
+      }
+      @keyframes slide{
+      0%{margin-left:-800px;}
+      20%{margin-left:-800px;}
+      35%{margin-left:0px;}
+      100%{margin-left:0px;}
+      }
+      @keyframes reveal{
+      0%{opacity: 0; width: 0px;}
+      20%{opacity: 1; width: 0px;}
+      30%{width: 655px;}
+      80%{opacity: 1;}
+      100%{opacity: 0; width: 640px;}
+      }
+   </style>
+   <body>
+      <div class="options">
+         <a href="/" style="text-decoration:none"><h1 class="logo">Spike&#8249<span>X</span>&#8250</h1></a>
+         <nav>
+            <ul>
+               <li><a href="/" class="active"><i class="fa fa-house"></i> Home</a></li>
+               <li><a href="/api"><i class="fa fa-cog"></i> API</a></li>
+               <li><a href="/aboutus"><i class="fa fa-user"></i> About Us</a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="heading" bold>
+         <h3> <span class="auto-type"></span></h3>
+      </div>
+      <div class="loader">
+         <form action="attack_page" method="post">
+            <input class="searchbox" type="url" placeholder="Type URL" name="target_url" value="" required>
+            <button type="submit">ATTACK</button>
+         </form>
+      </div>
+      <div class="backvideo">
+      <section id="video">
+         <video id="bgvid" autoplay loop muted>
+            <source type="video/mp4" src="{{ url_for('static', filename='media/Hacker.mov') }}">
+         </video>
+         <div class="slider">
+            <div>
+               <P> </P>
+               <p>Open Source</p>
+               <P>Intelligence Tool</P>
+            </div>
+            <div>
+               <span>OSINT Community Project</span>
+            </div>
+      </section>
+      </div>
+      <div class="technologies" bold>
+         Technologies used:
+      </div>
+      <div class="logo-image1">
+         <div class="imagediv1"><img class="imgweb" src="{{ url_for('static', filename='media/webd.png') }}" alt="img not found"></div>
+         <div class="imagediv2"><img class="imgshodan" src="{{ url_for('static', filename='media/shodan.png') }}" alt="img not found"></div>
+         <div class="imagediv3"><img class="imgpython" src="{{ url_for('static', filename='media/python.png') }}" alt="img not found"></div>
+         <div class="imagediv4"><img class="imgdigitalocean" src="{{ url_for('static', filename='media/digitalocean.png') }}" alt="img not found"></div>
+      </div>
+      <div class="logo-image2">
+         <div class="imagediv5"><img class="imgnginx" src="{{ url_for('static', filename='media/nginx.png') }}" alt="img not found"></div>
+         <div class="imagediv6"><img class="imggunicorn" src="{{ url_for('static', filename='media/gunicorn.png') }}" alt="img not found"></div>
+         <div class="imagediv7"><img class="imgjson" src="{{ url_for('static', filename='media/json.png') }}" alt="img not found"></div>
+         <div class="imagediv8"><img class="imgflask" src="{{ url_for('static', filename='media/flask.png') }}" alt="img not found"></div>
+      </div>
+      <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
+      <script>
+         var typed = new Typed(".auto-type", {
+             strings: ["Find vulnerabilities before Hackers do","Eliminate website Vulnerabilities","Stay compliant, Stay protected","Powered by Shodan Search Engine"],
+             typeSpeed: 50,
+             backSpeed: 50,
+             loop: true
+         })
+      </script> 
+
+   </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Results</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/url.css') }}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <div class="options">
+         <a href="/" style="text-decoration:none"><h1 class="logo">Huntre<span>ss </span></h1></a>
+         <nav>
+            <ul>
+               <li><a href="/"><i class="fa fa-house"></i> Home</a></li>
+               <li><a href="/api" class="active"><i class="fa fa-cog"></i> API</a></li>
+               <li><a href="/aboutus"><i class="fa fa-user"></i> About Us</a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="scan-result">
+         <h1>Scan Results</h1>
+      </div>
+      <div class="sitemap">
+         <b>Sitemap Data</b>
+         <br>
+         {{ sitemap_json }}
+         <br>
+         <br>
+         <b>Href Data</b>
+         {{ href_json }}
+         <br>
+         <br>
+         <b>Robots Allowed</b>
+         {{ allow_robots_json }}
+         <br>
+         <br>
+         <b>Robots Disallowed</b>
+         {{ disallow_robots_json }}
+         <br>
+         <b>HTTP Header data</b>
+         <br>
+         <br>
+         {{ http_header_data_json }}
+         <br>
+         <br>
+         <b>Form tags detected: </b>
+         {{ form_int }}
+         <br>
+         <b>Subdomain Enumeration data</b>
+         <br>
+         {{ sub_json }}
+         <br>
+         <b>Directory Enumeration data</b>
+         <br>
+         <br>
+         {{ dir_json }}
+         <br>
+         <br>
+         <b>Shodan Data</b>
+         <br>
+         <br>
+         {{ shodan_data_json }}
+      </div>
+   </body>
+</html>

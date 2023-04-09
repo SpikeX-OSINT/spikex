@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/scan_result.css') }}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&display=swap" rel="stylesheet">
+        
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        
+
+</head>
+<body>
+    <div class="options">
+        <a href="/" style="text-decoration:none"><h1 class="logo">Spike&#8249<span>X</span>&#8250<h1></a>
+        <nav>
+           <ul>
+              <li><a href="/" class="active"><i class="fa fa-house"></i> Home</a></li>
+              <li><a href="/api"><i class="fa fa-cog"></i> API</a></li>
+              <li><a href="/aboutus"><i class="fa fa-user"></i> About Us</a></li>
+           </ul>
+        </nav>
+    </div>
+    <div class="scan_heading">
+        <h1>Scan result</h1>
+    </div>
+    <br>
+<div class="result">
+
+
+
+<h1>Sitemap Data</h1>
+<br>
+{% for index in range(0, sitemap_list_len) %}
+<li><a href="{{sitemap_list[index]}}" target="_blank">{{sitemap_list[index]}}</a></li>
+{%endfor%}
+
+
+<br>
+<br>
+
+<h1>Href Data</h1>
+<br>
+{% for index in range(0, href_list_len) %}
+<li><a href="{{href_list[index]}}" target="_blank">{{ href_list[index] }}</a></li>
+{% endfor %}
+
+
+<br>
+<br>
+
+
+<h1>Robots Allowed</h1>
+<br>
+{% for index in range(0, allow_robots_list_len)%}
+<li><a href="{{ allow_robots_list[index] }}" target="_blank">{{ allow_robots_list[index] }}</a></li>
+{% endfor %}
+
+
+<br>
+<br>
+
+
+<h1>Robots Disallowed</h1>
+<br>
+{% for index in range(0, disallow_robots_list_len)%}
+<li><a href="{{ disallow_robots_list[index] }}" target="_blank">{{ disallow_robots_list[index] }}</a></li>
+{% endfor %}
+
+<br>
+<br>
+
+<h1>HTTP Header data</h1>
+<br>
+{% for key in http_header_data_dict_key_list %}
+<h5><li>{{key}}:</h5> <p>{{ http_header_data_dict[key] }}</p></li>
+<br>
+{% endfor %}
+
+
+<br>
+
+
+<h1>Form tags detected: </h1>
+{{ form_int }}
+
+
+<br>
+<br>
+</div>
+
+<!--        Shodan data starts        -->
+<!--
+<br>
+<br>
+<b>Shodan Data</b>
+{{ shodan_data_json }}
+<br>
+<br>
+-->
+
+<div class="shodan"> 
+<b>city: </b>
+{{ shodan_city_out }}
+<br>
+<br>
+<b>region_code: </b>
+{{ shodan_region_code_out }}
+<br>
+<br>
+<b>os: </b>
+{{ shodan_os_out }}
+<br>
+<br>
+<b>tags: </b>
+{%for index in range(0, shodan_tags_len_out)%}
+<li>{{shodan_tags_list_out[index]}}</li>
+{%endfor%}
+<br>
+<br>
+<b>ip: </b>
+{{ shodan_ip_out }}
+<br>
+<br>
+<b>isp: </b>
+{{ shodan_isp_out }}
+<br>
+<br>
+<b>area_code: </b>
+{{ shodan_area_code_out }}
+<br>
+<br>
+<b>longitude: </b>
+{{ shodan_longitude_out }}
+<br>
+<br>
+<b>last_update: </b>
+{{ shodan_last_update_out }}
+<br>
+<br>
+<b>ports: </b>
+{%for index in range(0, shodan_ports_len_out)%}
+<li>{{shodan_ports_list_out[index]}}</li>
+{%endfor%}
+<br>
+<br>
+<b>latitude: </b>
+{{ shodan_latitude_out }}
+<br>
+<br>
+<b>hostnames: </b>
+{%for index in range(0, shodan_hostnames_len_out)%}
+<li>{{ shodan_hostnames_list_out[index] }}</li>
+{%endfor%}
+<br>
+<br>
+<b>country_code: </b>
+{{ shodan_country_code_out }}
+<br>
+<br>
+<b>country_name: </b>
+{{ shodan_country_name_out }}
+<br>
+<br>
+<b>domains: </b>
+{%for index in range(0, shodan_domains_len_out)%}
+<li>{{ shodan_domains_list_out[index] }}</li>
+{%endfor%}
+<br>
+<br>
+<b>org: </b>
+{{ shodan_org_out }}
+<br>
+<br>
+<b>asn: </b>
+{{ shodan_asn_out }}
+<br>
+<br>
+<b>ip_str: </b>
+{{ shodan_ip_str_out }}
+<br>
+<br>
+<b>Data: </b>
+{% for value in shodan_Data_out %}
+{{ value }}
+{% endfor %}
+</div>
+
+<!-- Data field printing starts -->
+
+<!--
+<b>Data: </b>
+{% for load in shodan_info_dict_keys_out %}
+<p> {{ load }} : {{ shodan_info_dict_out[load] }} </p>
+{% endfor %}
+-->
