@@ -237,10 +237,6 @@ SpikeX is in the way of developing command-line interface for all those furious 
 #### Endless Possibilities
 Got an awesome idea? feel free to let us know about it. New ideas from the communiy are the most pleasurable things for us. More developments on the availability, deployment, functionalilites, etc. can be suggested to us.
 
+#### License 
 
-## :cup_with_straw: Donate us :cup_with_straw:
-We are a small community of techie nerds with a dream of expanding this project better say mindset. If you like the concept of the the project and consider us buying some coffee to keep us awake at chilly nights, please consider donating us. 
-
-[Buy me a Coffee](https://www.buymeacoffee.com/spikeX) 
-
-![Logo](https://www.buymeacoffee.com/assets/img/guidelines/download-assets-2.svg)
+This project is licensed under the MIT License - see the [LICENSE](https://raw.githubusercontent.com/SpikeX-OSINT/spikex/main/LICENSE) file for details.
