@@ -1,6 +1,3 @@
-# spikex_web
-
-
 # :computer:	SpikeX - Open Source OSINT Framework :detective:	
 
 __This project is made with lots of caffiene :cup_with_straw:	:cup_with_straw: :cup_with_straw:	(or love, both are the same things .... )__  		
